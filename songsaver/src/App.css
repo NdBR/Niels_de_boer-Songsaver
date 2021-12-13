@@ -1,0 +1,35 @@
+.App {
+	text-align: center;
+}
+
+.Container-header {
+	background-color: #079163;
+	min-height: 20 vh;
+}
+.song-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: left;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+
+.song-row__item {
+	width: 100px;
+	margin: 0;
+	padding: 0;
+}
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
