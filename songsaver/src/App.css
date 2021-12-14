@@ -1,35 +1,33 @@
+body {
+	background-color: #50585b;
+}
+form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 90vw;
+	text-align: left;
+	margin: 0 0 40px 5vw;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+	width: 90vw;
+	height: 35px;
+	margin-left: 5vw;
+	margin-bottom: 5px;
+	background-color: #5c97aa;
+}
+tr {
+	border: 2px solid black;
+}
+
 .App {
 	text-align: center;
 }
 
-.Container-header {
-	background-color: #079163;
-	min-height: 20 vh;
-}
-.song-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	text-align: left;
-	width: 100vw;
-	margin: 0;
-	padding: 0;
-}
-
 .song-row__item {
-	width: 100px;
-	margin: 0;
-	padding: 0;
-}
-.App-link {
-	color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+	width: 15vw;
+	text-align: left;
+	padding: 10px;
 }
