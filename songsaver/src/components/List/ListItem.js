@@ -1,19 +1,19 @@
 import React from "react";
 
-const ListItem = ({ item, clickItem }) => {
+const ListItem = ({ item, deleteItem }) => {
 	const { title, artist, genre, rating } = item;
 	return (
 		<tbody key={item.id} value={item}>
 			<tr className="song-header">
-				<th className="song-row__item">{title}</th>
-				<th className="song-row__item">{artist}</th>
-				<th className="song-row__item">{genre}</th>
-				<th className="song-row__item">{rating}</th>
-				<th>
-					<button onClick={clickItem} value={item.id}>
+				<td className="song-row__item">{title}</td>
+				<td className="song-row__item">{artist}</td>
+				<td className="song-row__item">{genre}</td>
+				<td className="song-row__item">{rating}</td>
+				<td className="song-row__item">
+					<button onClick={deleteItem} value={item.id}>
 						delete
 					</button>
-				</th>
+				</td>
 			</tr>
 		</tbody>
 	);
