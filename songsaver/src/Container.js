@@ -1,7 +1,11 @@
 import React from "react";
 import SongList from "./containers/SongList";
+import Nav from "./components/Nav";
+import About from "./containers/About";
+
 import { useSelector, useDispatch } from "react-redux";
 import { deleteAllSongs, deleteSong } from "./redux/actions";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const Container = () => {
 	const dispatch = useDispatch();
@@ -13,21 +17,25 @@ const Container = () => {
 	// delete item
 	const handleDeleteItem = (event) => dispatch(deleteSong(event.target.value));
 
-	// sort songs AZ
-
-	// sort artrist AZ
-
-	// filter genre
-
-	// filter rating
-
 	return (
 		<>
-			<SongList
-				songListArray={songListArray}
-				handleDeleteAllItems={handleDeleteAllItems}
-				handleDeleteItem={handleDeleteItem}
-			/>
+			<Router>
+				<Nav />
+				<Routes>
+					<Route
+						path="/"
+						exact
+						element={
+							<SongList
+								songListArray={songListArray}
+								handleDeleteAllItems={handleDeleteAllItems}
+								handleDeleteItem={handleDeleteItem}
+							/>
+						}
+					/>
+					<Route path="about" element={<About />} />
+				</Routes>
+			</Router>
 		</>
 	);
 };

@@ -6,7 +6,7 @@ const SongList = (props) => {
 	return (
 		<>
 			<header className="Container-header">
-				<h1>song list saver</h1>
+				<h3>song list saver</h3>
 				<SongForm />
 
 				<table>
