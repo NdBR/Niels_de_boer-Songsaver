@@ -1,8 +1,14 @@
 import React from "react";
 import List from "../components/List/List";
 import SongForm from "../components/SongForm";
+import { useDispatch } from "react-redux";
+import { deleteAllSongs } from "../redux/actions/index";
 
 const SongList = (props) => {
+	const dispatch = useDispatch();
+	// delet all songs
+	const handleDeleteAllItems = () => dispatch(deleteAllSongs());
+
 	return (
 		<>
 			<header className="Container-header">
@@ -17,17 +23,14 @@ const SongList = (props) => {
 							<th className="song-row__item">Genre</th>
 							<th className="song-row__item">Rating</th>
 							<th className="song-row__item">
-								<button onClick={props.handleDeleteAllItems}>delete all</button>
+								<button onClick={handleDeleteAllItems}>delete all</button>
 							</th>
 						</tr>
 					</thead>
 				</table>
 			</header>
 			<main>
-				<List
-					items={props.songListArray}
-					handleDeleteItem={props.handleDeleteItem}
-				/>
+				<List />
 			</main>
 		</>
 	);

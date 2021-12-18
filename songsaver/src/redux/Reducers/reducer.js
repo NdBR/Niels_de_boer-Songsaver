@@ -6,10 +6,11 @@ const initState = {
 const reducer = (state = initState, action) => {
 	switch (action.type) {
 		case "ADD_SONG":
-			return { ...state, songs: [...state.songs, action.payload] }; //kan ook push gebruiken
+			return { ...state, songs: [...state.songs, action.payload] };
 
 		case "DELETE_All_SONGS":
-			return { ...state, songs: action.payload }; //kan ook push gebruiken
+			return { ...state, songs: [] };
+
 		case "DELETE_SONG":
 			return {
 				...state,

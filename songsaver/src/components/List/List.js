@@ -1,8 +1,15 @@
 import React from "react";
 import ListItem from "./ListItem";
+import { deleteSong } from "../../redux/actions/index";
+import { useDispatch, useSelector } from "react-redux";
 
-const List = (props) => {
-	const { items, handleDeleteItem } = props;
+const List = () => {
+	const items = useSelector((state) => state.songs);
+
+	const dispatch = useDispatch();
+	// delete item
+	const handleDeleteItem = (event) => dispatch(deleteSong(event.target.value));
+
 	const listItems =
 		items &&
 		items.map((item) => (
