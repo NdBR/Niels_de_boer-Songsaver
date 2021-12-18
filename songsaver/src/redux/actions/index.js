@@ -6,8 +6,6 @@ export const deleteSong = (id) => ({
 	type: "DELETE_SONG",
 	payload: id,
 });
-
-export const deleteAllSongs = (payload) => ({
+export const deleteAllSongs = () => ({
 	type: "DELETE_All_SONGS",
-	payload: payload,
 });
